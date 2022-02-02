@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+$bgColor:#131722;
+$lightBgColor:#24baef;
+$bgTransparent:rgba(36,186,239,.6) ;
+$fontColor:#fff;
+$borderColor:#a8a8a83d;
+$borderHeight:1px;
+$secondFontColor:#949cb0;
+
+
+body
+{
+    background-color: $bgColor !important;
+    color: $fontColor;
+    font-family: 'Montserrat Alternates', sans-serif;
+    
+}
+
+nav
+{
+    box-shadow:0 0px 8px rgba(51, 51, 51, 0.3);
+}
+nav  ul li a
+{
+    color:#fff !important;
+}
+nav
+{
+    font-size:1.1rem !important;
+}
