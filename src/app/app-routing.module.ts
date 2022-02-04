@@ -8,13 +8,12 @@ import {RegisterComponent} from './register/register.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { NetworkComponent } from './network/network.component';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { PeopleComponent } from './people/people.component';
+import { TvShowsComponent } from './tv-shows/tv-shows.component';
 
 
 const routes: Routes = [
-  {path: ""  ,  redirectTo:"home" , pathMatch: 'full'} ,   
+  {path: ""  ,  redirectTo:"register" , pathMatch: 'full'} ,   
   {path: "home"  ,  component: HomeComponent},
   {path:"about" , component: AboutComponent},
   {path:"login" , component: LoginComponent},
@@ -22,8 +21,7 @@ const routes: Routes = [
   {path:"movie_details" , component: MovieDetailsComponent},
   {path:"movies" , component: MoviesComponent},
   {path:"navbar" , component: NavbarComponent},
-  {path:"network" , component: NetworkComponent},
-  {path:"people" , component: PeopleComponent},
+  {path:"tvShows" , component: TvShowsComponent},
   {path: "**"  ,  component:NotfoundComponent} ,
 ];
 

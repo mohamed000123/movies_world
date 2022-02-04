@@ -1,1 +1,31 @@
-<p>register works!</p>
+<div class="container">
+    <form [formGroup]="registerform"  (ngSubmit)="get_form_info()">     <!-- registerform >>>>>> عباره عن اوبجيكت شايل كل بيانات الفورم وفيه ميثودز عشان اعرف اى تعديل حصل على الفورم-->
+        <div class="form-group">
+            <label for="firstname"  class="form-label">first name</label>
+            <input  [class.is-valid]= "registerform.controls['firstName'].errors   == null   &&   registerform.controls['firstName'].touched == true"
+             formControlName="firstName"  type="text" id="firstname" class="form-control" >
+         <p  *ngIf="registerform.controls['firstName'].errors   != null   &&   registerform.controls['firstName'].touched == true"  class="py-2 text-danger" >invalid input </p>
+        </div>
+        <div class="form-group">
+            <label for="lastName"  class="form-label">last name</label>
+            <input     [class.is-valid] ="registerform.controls['lastName'].errors   == null  && registerform.controls['lastName'].touched == true"
+             formControlName="lastName"  type="text" id="lastName" class="form-control" >
+          <p *ngIf="registerform.controls['lastName'].errors   != null  && registerform.controls['lastName'].touched == true"  class="py-2 text-danger">invalid input</p>
+        </div>
+        <div class="form-group">
+            <label for="email"  class="form-label">email name</label>
+            <input  [class.is-valid] ="registerform.controls['email'].errors   == null  && registerform.controls['email'].touched == true"
+             formControlName="email"  type="text" id="email" class="form-control" >
+          <p *ngIf="registerform.controls['email'].errors   != null && registerform.controls['email'].touched == true "  class="py-2 text-danger">invalid email</p>
+        </div>
+        <div class="form-group">
+            <label for="password"  class="form-label">password </label>
+            <input  [class.is-valid] ="registerform.controls['password'].errors   == null  && registerform.controls['password'].touched == true"
+             formControlName="password"  type="text" id="password" class="form-control" >
+          <p *ngIf="registerform.controls['password'].errors != null   &&   registerform.controls['password'].touched == true"  class="py-2 text-danger">invalid password</p>
+        </div>
+        <button type="submit" class="btn btn-success mt-5" [disabled]="!registerform.valid"> submit </button>
+    </form>
+</div>
+
+
